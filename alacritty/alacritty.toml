@@ -4,3 +4,5 @@ decorations="none"
 
 [font]
 size = 16.0
+
+import = ["~/.config/alacritty/rose-pine.toml"]
