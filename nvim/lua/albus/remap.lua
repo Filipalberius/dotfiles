@@ -22,26 +22,20 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
-
--- vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y<CR>')
+vim.keymap.set("n", "<leader>Y", '"+Y<CR>')
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
---vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
---vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'qf', 'help', 'checkhealth' },
-    callback = function()
-        vim.keymap.set('n', 'q', '<cmd>bd<cr>', { silent = true, buffer = true })
-    end,
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "qf", "help", "checkhealth" },
+	callback = function()
+		vim.keymap.set("n", "q", "<cmd>bd<cr>", { silent = true, buffer = true })
+	end,
 })

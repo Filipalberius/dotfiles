@@ -1,3 +1,6 @@
+[general]
+import = ["./rose-pine.toml"]
+
 [window]
 opacity = 0.9
 decorations="none"

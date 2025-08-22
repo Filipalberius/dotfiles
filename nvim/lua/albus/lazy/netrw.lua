@@ -1,10 +1,9 @@
-return
-    {
-    'prichrd/netrw.nvim',
+return {
+	"prichrd/netrw.nvim",
 
-    config = function()
-        require('netrw').setup({
-            use_devicons = true,
-        })
-    end
+	config = function()
+		require("netrw").setup({
+			use_devicons = true,
+		})
+	end,
 }
