@@ -34,6 +34,9 @@ bindsym $mod+e layout toggle split
 # focus the parent container
 bindsym $mod+a focus parent
 
+# Swap workspaces between monitors
+bindsym $mod+p exec ~/.config/i3/swap_monitors.sh
+
 set $firstmonitor DP-2
 set $secondmonitor DP-0
 
@@ -44,11 +47,11 @@ set $workspace1 "1: "
 set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
-set $workspace4 "5: "
-set $workspace4 "6: "
-set $workspace4 "7: "
-set $workspace4 "8: "
-set $workspace4 "9: "
+set $workspace5 "5: "
+set $workspace6 "6: "
+set $workspace7 "7: "
+set $workspace8 "8: "
+set $workspace9 "9: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
